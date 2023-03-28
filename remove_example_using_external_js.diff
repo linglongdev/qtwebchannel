@@ -1,0 +1,17 @@
+Description: remove example with privacy breaches (remote scripts and styles)
+Author: Dmitry Shachnev <mitya57@debian.org>
+Forwarded: not-needed
+Last-Update: 2019-09-20
+
+--- a/examples/webchannel/webchannel.pro
++++ b/examples/webchannel/webchannel.pro
+@@ -8,8 +8,7 @@ qtHaveModule(websockets) {
+ }
+ 
+ SUBDIRS += nodejs \
+-           qwclient \
+-           chatclient-html
++           qwclient
+ 
+ EXAMPLE_FILES += \
+     shared

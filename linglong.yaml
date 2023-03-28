@@ -1,0 +1,28 @@
+package:
+  id: qtwebchannel
+  kind: lib
+  version: 5.11.3
+
+base:
+  id: org.deepin.base
+  version: 20.5.0
+
+depends:
+- id: qtbase
+  version: 5.11.3.15
+- id: qtdeclarative
+  version: 5.11.3
+- id: qtwebsockets
+  version: 5.11.3
+
+
+source:
+  kind: git
+  url: https://github.com/deepin-community/qtwebchannel-opensource-src.git
+  version: uos/5.11.3
+  commit: 3f41cc8eb73ad820def431c56876f2b2699774c3
+
+  patch:
+  - remove_example_using_external_js.diff
+build:
+  kind: qmake
